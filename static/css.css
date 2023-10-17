@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./font/gilroy-semibold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(./font/gilroy-medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(./font/gilroy-regular.ttf);
+    font-weight: 400;
+}
+
+body {
+    background: #AA3730;
+    font-family: Gilroy;
+}
+
+.add {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    background: #D9D9D9;
+}
+
+nav {
+    display: flex;
+    width: calc(100% - 50px);
+    max-width: 1136px;
+    margin: 70px auto 44px;
+
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+}
+nav img{
+    width: 100px;
+    height: 100px;
+    border: none;
+}
+.banner {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 50px);
+    max-width: 1140px;
+    margin: auto;
+}
+
+.banner svg {
+    width: 453px;
+}
+
+.banner .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    justify-content: center;
+}
+
+.banner .right button {
+    color: #FFF;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    text-transform: uppercase;
+
+    padding: 20px 56px;
+    border-radius: 20px;
+    background: #F8AF0C;
+    border: none;
+}
+
+.banner .right h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 76px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% - 50px);
+    max-width: 1050px;
+    gap: 30px;
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+}
+
+.menu .block {
+    position: relative;
+    z-index: 2;
+    width: calc((100% /3) - 30px);
+    /* width: 320px; */
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 16px;
+    border-radius: 32px;
+    background: #FFF;
+
+}
+
+.menu .block .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .block .top h2 {
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: -1px;
+
+}
+
+.menu .block img {
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.lolSvgPredok {
+    position: relative;
+    width: calc(100% - 40px);
+    max-width: 1500px;
+    margin: auto;
+}
+
+.lolSvgPredok .lolSvg {
+    right: 0;
+    transform: translateY(-95%);
+    top: -100%;
+    position: absolute;
+
+}
+
+.FirstMeal {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: calc(100% - 50px);
+    max-width: 1250px;
+    margin: 0 auto 100px;
+}
+
+.FirstMeal .FirstMealTop {
+    justify-content: center;
+    display: flex;
+    gap: 26px;
+    margin: 35px 0 40px;
+}
+
+.FirstMeal .FirstMealTop h2 {
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 76px;
+    letter-spacing: 0.64px;
+}
+
+.FirstMeal .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.FirstMeal .main .block.add{
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+.FirstMeal .main .block {
+    width: calc(50% - 25px);
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    background: #FFF;
+
+
+}
+
+.FirstMeal .main .block img {
+    width: 220px;
+    border-radius: 18px;
+
+}
+
+.FirstMeal .main .block .right {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.FirstMeal .main .block .right h3 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.64px;
+    margin-bottom: 3px;
+}
+
+.FirstMeal .main .block .right .peculiarities {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FirstMeal .main .block .right .peculiarities .peculiaritiesBlock {
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    background: #F8AF0C;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.FirstMeal .main .block .right .price {
+    font-family: Gilroy;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0.64px;
+    margin-top: auto;
+}
+
+.lolSvgPredok_2 {
+    position: relative;
+    width: calc(100% - 400px);
+    max-width: 1500px;
+    margin: auto;
+}
+
+.lolSvgPredok_2 .lolSvg {
+    right: 0;
+    transform: translateY(310px);
+    position: absolute;
+
+}
+
+
+@media (max-width:1200px) {
+    nav {
+        margin: 33px auto;
+    }
+
+    .banner {
+        justify-content: center;
+        gap: 33px;
+        margin: 70px auto;
+    }
+
+    .banner svg {
+        width: 255px;
+        height: auto;
+    }
+
+    .banner .right {
+        gap: 17px;
+    }
+
+    .banner .right button {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 24px;
+        padding: 10px 28px;
+        border-radius: 10px;
+
+    }
+
+    .banner .right h1 {
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: 0.32px;
+    }
+
+    .lolSvgPredok .lolSvg {
+        width: 251.723px;
+
+    }
+
+    .menu {
+        margin-top: 0;
+    }
+
+    .menu .block {
+        padding: 20px;
+        border-radius: 20px;
+
+    }
+
+    .menu .block .top h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 22.5px;
+        letter-spacing: -0.5px;
+
+    }
+
+    .menu .block .top svg {
+        min-width: 40px;
+        max-width: 40px;
+    }
+
+    .FirstMeal .main .block img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .FirstMeal .main .block .right h3 {
+        font-size: 30px;
+    }
+
+    .FirstMeal .main .block .right .price {
+        font-size: 34px;
+    }
+
+    .FirstMeal .main .block .right .peculiarities .peculiaritiesBlock svg {
+        width: 12px;
+        height: auto;
+
+    }
+}
+
+@media (max-width:1000px) {
+    .FirstMeal .main .block img {
+        width: 110px;
+        height: 110px;
+        border-radius: 9px;
+
+    }
+
+    .FirstMeal .main .block {
+        gap: 20px;
+    }
+
+    .FirstMeal .main .block .right h3 {
+        font-size: 20px;
+        letter-spacing: 0.32px;
+    }
+
+    .FirstMeal .main .block {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .FirstMeal .main .block .right .peculiarities .peculiaritiesBlock {
+        font-size: 8px;
+        border-radius: 6px;
+        padding: 5px 12px;
+    }
+
+    .FirstMeal .main .block .right .price {
+        font-size: 17px;
+        letter-spacing: 0.32px;
+    }
+
+    .FirstMeal .FirstMealTop h2 {
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: 0.32px;
+    }
+
+    .FirstMeal .FirstMealTop svg {
+        width: 28px;
+        height: auto;
+    }
+
+    .FirstMeal {
+        gap: 0;
+    }
+
+    .FirstMeal .FirstMealTop {
+        gap: 13px;
+    }
+
+    .lolSvgPredok_2 .lolSvg {
+        width: 401px;
+        height: auto;
+        right: auto;
+        left: 0;
+        transform: translateX(-70%) translateY(310px);
+    }
+
+}
+
+@media (max-width:800px) {
+    .menu .block .top h2 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22.5px;
+        letter-spacing: -0.5px;
+
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu .block {
+        width: calc(25% - (45px / 3));
+        padding: 16px;
+        border-radius: 16px;
+        gap: 16px;
+    }
+
+    .menu .block .top svg {
+        min-width: 30px;
+        max-width: 30px;
+        height: auto;
+    }
+}
+
+@media (max-width:700px) {
+    .menu .block {
+        width: calc((100% / 3) - (45px / 3));
+    }
+    .FirstMeal .main {
+        gap: 15px;
+    }
+    .FirstMeal .main .block{
+        width: 100%;
+    }
+    .FirstMeal .main .block.add{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    .menu .block {
+        width: calc((100% / 2) - (45px / 3));
+    }
+    .banner{
+        flex-direction: column;
+        align-items: center;
+    }
+}
