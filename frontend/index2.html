@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashkana store</title>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="{%static 'css.css'%}">
 </head>
 <body>
     <div class="lolSvgPredok_2">
@@ -301,13 +302,14 @@
                     d="M18.025 27.3C23.1475 27.3 27.3 22.1289 27.3 15.75C27.3 9.37107 23.1475 4.19995 18.025 4.19995C12.9026 4.19995 8.75 9.37107 8.75 15.75C8.75 22.1289 12.9026 27.3 18.025 27.3Z"
                     stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <h2>Первые блюда</h2>
+            <h2>{{category.name}}</h2>
         </div>
         <div class="main">
+            {% for product in category.products.all %}
             <div class="block">
-                <img src="images/kasha.png" alt="">
+                <img src="{{product.image.url}}" alt="">
                 <div class="right">
-                    <h3>Каша рисовая</h3>
+                    <h3>{{product.name}}</h3>
                     <div class="peculiarities">
                         <div class="peculiaritiesBlock">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"
@@ -327,203 +329,17 @@
                                 <path d="M19.3481 3.16211V6.11092" stroke="black" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            Горячее
+                            {{product.category.name}}
                         </div>
                     </div>
                     <div class="price">
-                        100 сом
+                        {{product.price}} сом
                     </div>
                 </div>
             </div>
-            <div class="block">
-                <img src="images/kasha.png" alt="">
-                <div class="right">
-                    <h3>Каша рисовая</h3>
-                    <div class="peculiarities">
-                        <div class="peculiaritiesBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"
-                                fill="none">
-                                <path d="M1 23.8857H25" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.39249 20.9368C2.83316 18.4265 4.13999 16.1502 6.08558 14.5039C8.03118 12.8577 10.4924 11.9456 13.041 11.9265C15.5843 11.9325 18.0429 12.8416 19.9783 14.4919C21.9136 16.1422 23.1998 18.4262 23.6075 20.9368"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.041 11.8446C14.2171 11.8446 15.1706 10.8911 15.1706 9.7149C15.1706 8.53871 14.2171 7.58521 13.041 7.58521C11.8648 7.58521 10.9113 8.53871 10.9113 9.7149C10.9113 10.8911 11.8648 11.8446 13.041 11.8446Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.041 1.11426V4.14496" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M6.7338 3.16211V6.11092" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M19.3481 3.16211V6.11092" stroke="black" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Горячее
-                        </div>
-                    </div>
-                    <div class="price">
-                        100 сом
-                    </div>
-                </div>
-            </div>
-            <div class="block">
-                <img src="images/kasha.png" alt="">
-                <div class="right">
-                    <h3>Каша рисовая</h3>
-                    <div class="peculiarities">
-                        <div class="peculiaritiesBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"
-                                fill="none">
-                                <path d="M1 23.8857H25" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.39249 20.9368C2.83316 18.4265 4.13999 16.1502 6.08558 14.5039C8.03118 12.8577 10.4924 11.9456 13.041 11.9265C15.5843 11.9325 18.0429 12.8416 19.9783 14.4919C21.9136 16.1422 23.1998 18.4262 23.6075 20.9368"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.041 11.8446C14.2171 11.8446 15.1706 10.8911 15.1706 9.7149C15.1706 8.53871 14.2171 7.58521 13.041 7.58521C11.8648 7.58521 10.9113 8.53871 10.9113 9.7149C10.9113 10.8911 11.8648 11.8446 13.041 11.8446Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.041 1.11426V4.14496" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M6.7338 3.16211V6.11092" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M19.3481 3.16211V6.11092" stroke="black" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Горячее
-                        </div>
-                    </div>
-                    <div class="price">
-                        100 сом
-                    </div>
-                </div>
-            </div>
-            <div class="block">
-                <img src="images/kasha.png" alt="">
-                <div class="right">
-                    <h3>Каша рисовая</h3>
-                    <div class="peculiarities">
-                        <div class="peculiaritiesBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"
-                                fill="none">
-                                <path d="M1 23.8857H25" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.39249 20.9368C2.83316 18.4265 4.13999 16.1502 6.08558 14.5039C8.03118 12.8577 10.4924 11.9456 13.041 11.9265C15.5843 11.9325 18.0429 12.8416 19.9783 14.4919C21.9136 16.1422 23.1998 18.4262 23.6075 20.9368"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.041 11.8446C14.2171 11.8446 15.1706 10.8911 15.1706 9.7149C15.1706 8.53871 14.2171 7.58521 13.041 7.58521C11.8648 7.58521 10.9113 8.53871 10.9113 9.7149C10.9113 10.8911 11.8648 11.8446 13.041 11.8446Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.041 1.11426V4.14496" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M6.7338 3.16211V6.11092" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M19.3481 3.16211V6.11092" stroke="black" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Горячее
-                        </div>
-                    </div>
-                    <div class="price">
-                        100 сом
-                    </div>
-                </div>
-            </div>
-            <div class="block">
-                <img src="images/kasha.png" alt="">
-                <div class="right">
-                    <h3>Каша рисовая</h3>
-                    <div class="peculiarities">
-                        <div class="peculiaritiesBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"
-                                fill="none">
-                                <path d="M1 23.8857H25" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.39249 20.9368C2.83316 18.4265 4.13999 16.1502 6.08558 14.5039C8.03118 12.8577 10.4924 11.9456 13.041 11.9265C15.5843 11.9325 18.0429 12.8416 19.9783 14.4919C21.9136 16.1422 23.1998 18.4262 23.6075 20.9368"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.041 11.8446C14.2171 11.8446 15.1706 10.8911 15.1706 9.7149C15.1706 8.53871 14.2171 7.58521 13.041 7.58521C11.8648 7.58521 10.9113 8.53871 10.9113 9.7149C10.9113 10.8911 11.8648 11.8446 13.041 11.8446Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.041 1.11426V4.14496" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M6.7338 3.16211V6.11092" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M19.3481 3.16211V6.11092" stroke="black" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Горячее
-                        </div>
-                    </div>
-                    <div class="price">
-                        100 сом
-                    </div>
-                </div>
-            </div>
-            <div class="block">
-                <img src="images/kasha.png" alt="">
-                <div class="right">
-                    <h3>Каша рисовая</h3>
-                    <div class="peculiarities">
-                        <div class="peculiaritiesBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"
-                                fill="none">
-                                <path d="M1 23.8857H25" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.39249 20.9368C2.83316 18.4265 4.13999 16.1502 6.08558 14.5039C8.03118 12.8577 10.4924 11.9456 13.041 11.9265C15.5843 11.9325 18.0429 12.8416 19.9783 14.4919C21.9136 16.1422 23.1998 18.4262 23.6075 20.9368"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.041 11.8446C14.2171 11.8446 15.1706 10.8911 15.1706 9.7149C15.1706 8.53871 14.2171 7.58521 13.041 7.58521C11.8648 7.58521 10.9113 8.53871 10.9113 9.7149C10.9113 10.8911 11.8648 11.8446 13.041 11.8446Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.041 1.11426V4.14496" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M6.7338 3.16211V6.11092" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M19.3481 3.16211V6.11092" stroke="black" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Горячее
-                        </div>
-                    </div>
-                    <div class="price">
-                        100 сом
-                    </div>
-                </div>
-            </div>
-            <div class="block">
-                <img src="images/kasha.png" alt="">
-                <div class="right">
-                    <h3>Каша рисовая</h3>
-                    <div class="peculiarities">
-                        <div class="peculiaritiesBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"
-                                fill="none">
-                                <path d="M1 23.8857H25" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M2.39249 20.9368C2.83316 18.4265 4.13999 16.1502 6.08558 14.5039C8.03118 12.8577 10.4924 11.9456 13.041 11.9265C15.5843 11.9325 18.0429 12.8416 19.9783 14.4919C21.9136 16.1422 23.1998 18.4262 23.6075 20.9368"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M13.041 11.8446C14.2171 11.8446 15.1706 10.8911 15.1706 9.7149C15.1706 8.53871 14.2171 7.58521 13.041 7.58521C11.8648 7.58521 10.9113 8.53871 10.9113 9.7149C10.9113 10.8911 11.8648 11.8446 13.041 11.8446Z"
-                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M13.041 1.11426V4.14496" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M6.7338 3.16211V6.11092" stroke="black" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M19.3481 3.16211V6.11092" stroke="black" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Горячее
-                        </div>
-                    </div>
-                    <div class="price">
-                        100 сом
-                    </div>
-                </div>
-            </div>
-            <div class="block add">
-                реклама
-            </div>
+            {% endfor %}
+            <a href='{{ads.cat_ads_link}}' class="block add" style="background-image: url('{{ads.cat_ads.url}}');">
+            </a>
         </div>
     </div>
 </body>

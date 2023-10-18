@@ -202,6 +202,9 @@ nav img{
     align-items: center;
     font-size: 40px;
     font-weight: 600;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
 }
 .FirstMeal .main .block {
     width: calc(50% - 25px);

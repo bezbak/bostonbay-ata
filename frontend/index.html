@@ -100,7 +100,7 @@
     </div>
     <div class="menu">
         {% for category in categories %}
-        <a href="{% url "index" %}" class="block">
+        <a href="{% url "category_detail" category.slug %}" class="block">
             <div class="top">
                 <h2>{{category.name}}</h2>
                 <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">

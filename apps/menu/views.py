@@ -15,3 +15,12 @@ def index(request):
         'category':category,
     }
     return render(request, 'index.html',context)
+
+def category_detail(request, slug):
+    category = Category.objects.get(slug = slug)
+    ads = ADS.objects.all().latest('id')
+    context = {
+        'ads':ads,
+        'category':category
+    }
+    return render(request, 'index2.html', context)
